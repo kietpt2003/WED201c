@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FPT - Shop</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styleFlex.css">
+    </head>
+    <body>
+        <!-- Navbar: Thanh điều hướng -->
+        <!-- nav chính là flex container còn 2 thẻ <ul> chính là flex item
+        lưu ý flex item chính là con trực tiếp của flex container
+        có nghĩa là tag <li> không phải flex item của nav
+        trừ khi <ul> là flex container -->
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="nav-item">Giới thiệu</li>
+                <li class="nav-item">Kết nối</li>
+                <li class="nav-item">Tải ứng dụng</li>
+            </ul>
+            <ul class="nav-list">
+                <li class="nav-item">Đăng ký</li>
+                <li class="nav-item">Đăng nhập</li>
+            </ul>
+        </div>
+
+        <!-- Form layout -->
+        <div class="form-container">
+            <form action="" class="form">
+                <div class="form_row">
+                    <label class="form_label" for="name">Name:</label>
+                    <input class="form_input" type="text">
+                </div>
+                <div class="form_row">
+                    <label class="form_label" for="password">Password:</label>
+                    <input class="form_input" type="text">
+                </div>
+            </form>
+        </div>
+
+        <!-- Column layout -->
+        <div class="column-layout">
+            <div class="column-item sidebar-one">
+                <h2>Sidebar one</h2>
+                <p>I'm writing to you in reference to the new high school that I have bought for you.</p>
+            </div>
+            <div class="column-item main-column">
+                <h2>Main column</h2>
+                <p>I'm writing to you in reference to the house that next to my house where people are not friendly.</p>
+                <p>At the moment I'm working as a Sample of the IT Fesher where I have become stronger.</p>
+                <p>Your job list sounds great! I hope that you be success in the future and make me beccome richer.</p>
+            </div>
+            <div class="column-item sidebar-two">
+                <h2>Sidebar two</h2>
+                <p>I'm writing to you in reference to the exam that I have fail two month ago and it really sad.</p>
+            </div>
+        </div>
+
+        <!-- Feature layout -->
+        <div class="feature-layout">
+            <div class="feature-item">
+                <h2>Feature 1</h2>
+                <p>I'm writing to you in reference to the new high school that I have bought for you.</p>
+            </div>
+            <div class="feature-item">
+                <h2>Feature 2</h2>
+                <p>At the moment I'm working as a Sample of the IT Fesher where I have become stronger.</p>
+            </div>
+            <div class="feature-item">
+                <h2>Feature 3</h2>
+                <p>Your job list sounds great! I hope that you be success in the future and make me beccome richer.</p>
+            </div>
+        </div>
+
+        <!-- Wrap layout -->
+        <div class="wrap-layout">
+            <div class="wrap-layout__item">1</div>
+            <div class="wrap-layout__item">2</div>
+            <div class="wrap-layout__item">3</div>
+            <div class="wrap-layout__item">4</div>
+            <div class="wrap-layout__item">5</div>
+        </div>
+
+        <!-- Center layout -->
+        <div class="center-layout">
+            <h3 class="center-layout__item">Center item</h3>
+        </div>
+
+        <!-- Chart -->
+        <!-- --percent là biến với giá trị là 20%, 10%, 69%,... -->
+        <div class="chart-layout">
+            <div class="chart-layout__item" style="--percent: 10%">10%</div>
+            <div class="chart-layout__item" style="--percent: 20%">20%</div>
+            <div class="chart-layout__item" style="--percent: 40%">40%</div>
+            <div class="chart-layout__item" style="--percent: 90%">90%</div>
+            <div class="chart-layout__item" style="--percent: 80%">80%</div>
+            <div class="chart-layout__item" style="--percent: 40%">40%</div>
+            <div class="chart-layout__item" style="--percent: 10%">10%</div>
+            <div class="chart-layout__item" style="--percent: 20%">20%</div>
+            <div class="chart-layout__item" style="--percent: 69%">69%</div>
+            <div class="chart-layout__item" style="--percent: 96%">96%</div>
+            <div class="chart-layout__item" style="--percent: 60%">60%</div>
+            <div class="chart-layout__item" style="--percent: 88%">88%</div>
+        </div>
+
+        <!-- Layout cuối cùng -->
+        <div class="the-end">
+            <div class="the-end__first">
+                <p>I'm writing to you in reference to the house that next to my house where people are not friendly.</p>
+                <p>At the moment I'm working as a Sample of the IT Fesher where I have become stronger.</p>
+                <p>Your job list sounds great! I hope that you be success in the future and make me beccome richer.</p>
+            </div>
+            <div class="the-end__second">
+                <div class="the-end__second-one">
+                    <p>I'm writing to you in reference to the new high school that I have bought for you.</p>
+                </div>
+                <div class="the-end__second-two">
+                    <p>At the moment I'm working as a Sample of the IT Fesher where I have become stronger.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

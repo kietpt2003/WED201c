@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Information form</title>
+    <meta charset="UTF-8">
+    <script src="myJavaScript.js"></script>
+</head>
+
+<body>
+    <!-- tổng hợp check input -->
+    <form>
+        <h1 style="text-align: center;">Information form</h1>
+        <table style="margin: auto;">
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td>
+                    <!-- trong tag <input> có size, dùng để tăng độ dài của ô input
+                    còn có maxlength dùng để giới hạn số chữ cái người dùng có thể nhập
+                    còn có title dùng để khi người dùng di chuột vào ô input nó sẽ hiện
+                    1 dòng hướng dẫn
+                    còn có placeholder dùng để hiện dòng chữ mờ gợi ý cho người dùng biết phải nhập gì -->
+                    <input type="text" id="name">
+                </td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>
+                    <input type="text" id="age">
+                </td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>
+                    <input type="text" id="address">
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <!-- radio là để ra cái chấm chọn lựa
+                    input kiểu radio thường đi với label để hiển thị được chữ Male/Female, không thì ghi thẳng chữ ra
+                    for="male" là để chỉ vô cái id="male" còn cái value="Male" là biến lưu kết quả của tag input radio
+                    để dùng bên javascript khi nào cần. Ví dụ: người dùng chọn ô Male thì sẽ .checked=true(checked qua js giải thích) và sẽ có giá trị(value) là "Male"
+                    còn nếu không check(.checked=false) thì sẽ không có value "Male" hay "Female" gì hết -->
+                    <input type="radio" value="Male" id="male">Male
+                    <!-- <label for="male">Male</label> -->
+                    <input type="radio" value="Female" id="female">Female
+                    <!-- <label for="female">Female</label> -->
+                </td>
+            </tr>
+            <tr>
+                <td>Favorite</td>
+                <td>
+                    <!-- <input type="checkbox" value="java" id="favorite">Java
+                        value="java" là truyền luôn vô chỗ nhập chữ "java"
+                        thường người ta không truyền sẵn -->
+                    <input type="checkbox" value="Java" id="favorite">Java
+                    <input type="checkbox" value="Python" id="favorite">Python
+                    <input type="checkbox" value="JavaScript" id="favorite">Java Script
+                </td>
+            </tr>
+            <tr>
+                <!-- onclick="submit() dùng để gọi hàm submit() bên js khi ấn vô button
+                    value="Submit" là để ghi vô cái button -->
+                <td>
+                    <input type="button" value="Submit" onclick="send__submit()">
+                </td>
+                <td>
+                    <input type="button" value="Reset" onclick="send__reset()">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

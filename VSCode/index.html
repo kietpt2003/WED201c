@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html>
+<!-- Đây là comments -->
+<!-- 1. h1 - h6 - heading
+        2. p - paragraph
+        3. img - image
+        4. a - anchor
+        5. ul, li - unordered list, list item 
+        6. table 
+        7. input 
+        8. button - button tạo nút nhất
+        9. div - là một cái khối bao quanh một phần gì đó để hiển thị
+    -->
+
+<head>
+    <title>FPT - Shop</title>
+    <meta charset="UTF-8">
+
+    <!-- Viết CSS rời (External) dùng tag <link> để liên kết style.css qua đây -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Viết CSS bên trong html (Internal). Đổi màu và size chữ cho h1 (CSS) dùng tag <style>-->
+    <!-- <style>
+        h1 {
+            color: blue;
+            font-size: 30px;
+        }
+    </style> -->
+</head>
+
+<body>
+    <div>
+        <!-- Viết CSS theo kiểu Inline. title bên h1 là attribute, khi chạy để vô dòng chữ đó 1 hồi là hiện attribute lên -->
+        <h1 title="Đây là thuộc tính(attribute)">HTML, CSS từ Zero Tới Hero</h1>
+        <!-- style cũng là 1 attribute, lưu ý: dấu ";" để ngăn cách giữa các attribute -->
+        <h2 style="color: red; font-size: 16px;">Thử phá game</h2>
+        <!-- onclick cũng là 1 attribute -->
+        <h3 onclick="">Không muốn phá game nữa</h3>
+        <p>
+            Tham gia các khóa học MIỄN PHÍ tại F8 tại đây nhé (đã quyết định theo thì hãy cố gắng đến cùng):
+        </p>
+        <p>
+            1. Kiến thức & cái nhìn tổng quan về ngành: https://fullstack.edu.vn/courses/less...
+        </p>
+        <p>
+            2. Code giao diện trang web với HTML, CSS: https://fullstack.edu.vn/courses/html...
+        </p>
+        <p>
+            3. Xử lý hiển thị tốt giao diện trên nhiều thiết bị khác nhau (responsive):
+            https://fullstack.edu.vn/courses/resp...
+        </p>
+        <p>
+            4. Lập trình Javascript cơ bản: https://fullstack.edu.vn/courses/java...
+        </p>
+        <p>
+            5. Lập trình Javascript nâng cao: https://fullstack.edu.vn/courses/java...
+        </p>
+        <p>
+            6. Lập trình Backend với Node & ExpressJS: https://fullstack.edu.vn/courses/nodejs
+        </p>
+        <!-- Cách đổi màu đúng cái cần thiết bằng attribute id, bên CSS phải khai #abc hoặc #xyz tùy theo tên id ddaxx đặt -->
+        <!-- Lưu ý: Vì ID là duy nhất (giống chứng minh thư) nên không dc gán id giống nhau, mặc dù chạy vẫn dc (vẫn tính là không hợp lệ mặc dù chạy dc) nhưng qua javascript mới báo lỗi -->
+        <p id="abc">Test ID 1</p>
+        <p id="xyz">Test ID 2</p>
+        <p id="ghj">Test ID 3</p>
+        <!-- Còn nếu muôn nhiều cái giống nhau thì dùng attribute class và bên CSS phải khai .abc hoặc .xyz -->
+        <p class="abc">Test class 1</p>
+        <p class="abc">Haha giống Test class 1 rồi</p>
+        <p class="abc">Haha lại giống Test class 1</p>
+
+        <img src="https://www.wikihow.com/images/thumb/8/82/Set-Image-Width-and-Height-Using-HTML-Step-1-Version-3.jpg/aid2914529-v4-728px-Set-Image-Width-and-Height-Using-HTML-Step-1-Version-3.jpg.webp"
+            alt="Ảnh lỗi rồi">
+        <!-- button tạo nút nhất. Trong TH này là tạo nút dẫn đến FB -->
+        <button>
+            <!-- target="_blank" để mở in new tab, ko ghi thì nó sẽ mở đè lên tab hiện tại -->
+            <a href="https://www.facebook.com/tuankiet29012003" target="_blank">Click here</a>
+        </button>
+        <!-- tag <ul> là dấu chấm tròn còn tag <ol> là số -->
+        <ul>
+            <li>What is your name?</li>
+            <input type="text" name="" id="">
+            <li>
+                Gender?
+                <!-- radio cho chọn 1 cái dựa theo name= -->
+                Male
+                <input type="radio" name="gender" id="">
+                Female
+                <input type="radio" name="gender" id="">
+            </li>
+            <li>Hobby?
+                <!-- checkbox cho chọn nhiều cái -->
+                Đá banh
+                <input type="checkbox" name="" id="">
+                Nhảy dây
+                <input type="checkbox" name="" id="">
+                Trốn tìm
+                <input type="checkbox" name="" id="">
+                Others
+                <input type="text" name="" id="">
+            </li>
+            <li>When?</li>
+        </ul>
+        <ol>
+            <li>Anh yêu em</li>
+            <li>Em yêu anh</li>
+            <li>Kiệt yêu Liễu</li>
+        </ol>
+        <!--rowspan là mở rộng số dòng của cái ô đó-->
+        <!--border để thêm viền cho khung, chọn 1, 2, 3,... là kích cỡ viền-->
+        <table border=3>
+            <thead>
+                <th>STT</th>
+                <th>Child's Name</th>
+                <th>Parent's Name</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2">1</td>
+                    <td rowspan="2">Catherine</td>
+                    <td>Michael McCarthy</td>
+                </tr>
+                <tr>
+                    <td>Colleen McCarthy</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Maggie</td>
+                    <td>Sheila McGee</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">3</td>
+                    <td rowspan="2">Edward</td>
+                    <td>Catherine Howard</td>
+                </tr>
+                <tr>
+                    <td>Jeff Howard</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Test độ ưu tiên priority -->
+    <div>
+        <!-- Độ ưu tiên priority của Internal và External là như nhau. Ông nào gọi sau cùng là mới nhất và theo ông đó -->
+        <!-- Priority 
+            !important - >1000
+            Inline - 1000
+            #id - 100
+            .class - 10
+            tag - 1
+            * (universal) - 0 (thằng này giống như ảnh hưởng đến tất cả mặc dù độ ưu tiên thấp nhất nên thằng nào cũng đè lên nó được)
+            kế thừa (inherited) viết tag bên CSS - -1 -->
+        <style>
+            /* class được ưu tiên cao hơn tag nên ăn theo màu class cho dù có ghi trước hay sau */
+            /* id được ưu tiên cao hơn class */
+            #jpd {
+                color: olive;
+            }
+            .xyz {
+                color: peru;
+            }
+            h4 {
+                color: pink;
+            }
+            /* .xyz {
+                color: peru;
+            } */
+
+            /* Nếu độ ưu tiên bằng nhau thì thằng nào gọi sau cùng là thằng đó */
+            #equal {
+                color: blue;
+            }
+            #equal {
+                color: red;
+            }
+
+            /* giả sử 1 tag vừa có id vừa có class mà muốn gọi cả 2 cái cho nó mạnh hơn (id 100, class 10 => id + class = 110 > id,class) */
+            /* Và nếu muốn mạnh hơn nữa thì thêm tên tag vào thì nó sẽ tìm theo tên tag và tương tự như trên, ví dụ h5#testSelect.better(111) > #testSelect.better(110)*/
+            h5#testSelect.better {
+                color: lightcoral;
+            }
+            .better {
+                color: bisque;
+            }
+            #testSelect {
+                color: blueviolet;
+            }
+            #testSelect.better {
+                color: navy;
+            }
+            
+            /* dùng !important(ghi sau 1 cái gì đó thì cái đó vip nhất, TH tất cả đều !important thì quay về xét như ban đầu) > inline*/
+            h6#testImp.perfect {
+                color: blue;
+            }
+            .perfect {
+                color: bisque;
+            }
+            #testImp {
+                color: blueviolet;
+            }
+            #testImp.perfect {
+                color: navy;
+            }
+        </style>
+        <h4 class="xyz">Ưu tiên class hơn tag</h4>
+        <h5 id="jpd" class="xyz">Ưu tiên id hơn class</h5>
+        <h5 style="color: rebeccapurple;" id="jpd" class="xyz">Ưu tiên inline hơn id</h5>
+        <h5 id="equal">Test độ ưu tiên bằng nhau</h5>
+        <h4 id="testSelect" class="better">Test select</h4>
+        <h5 id="testSelect" class="better">Test select VipPro</h5>
+        <h6 style="color: red; font-size: 30px;" id="testImp" class="perfect">!important VipPro</h6>
+    </div>
+
+    <!-- Test sử dụng biến bên CSS -->
+    <!-- Dùng kiểu gán biến sẽ tiện hơn trong việc sửa số lượng lớn -->
+    <!-- Ví dụ tông màu chủ đạo của 1 cái web là màu cam mà màu của mấy thằng cam đó đều dùng biến -->
+    <!-- Thì khi đổi màu chỉ cần đổi màu cho biến là tất cả đều thay đổi theo -->
+    <div>
+        <h5 id="testVar">Test global variable</h5>
+        <h5 id="testVar">Test global variable 1</h5>
+        <h5 id="testVar">Test global variable 2</h5>
+        <h5 id="testVar">Test global variable 3</h5>
+        <h5 id="testVar" class="test">Test local variable</h5>
+    </div>
+
+    <!-- Học về unit (đơn vị) -->
+    <!-- Absolute unit (thay đổi khung hình ntn thì cái khung cũng không thay đổi) -->
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: cadetblue;
+        }
+    </style>
+    <div class="box"></div>
+
+    <!-- Relative unit (đơn vị tương đối), cần 1 nơi phụ thuộc vào ví dụ thằng chứa nó -->
+    <!-- Đơn vị này sẽ thay đổi theo % nên không có bị không thay đổi như thằng kia -->
+    <!-- Trong TH bên dưới là nó ăn theo thằng chứa nó là testReU là 100px => nó chỉ còn 50px -->
+    <style>
+        .testRe {
+            width: 50%;
+            height: 50%;
+            background-color: brown;
+        }
+    </style>
+    <div style="width: 100px; height: 100px" class="testReU">
+        <div class="testRe"></div>
+    </div>
+
+    <!-- Đơn vị rem, 1rem = thằng ban đầu, 2rem = 2* thằng ban đầu -->
+    <!-- Ví dụ trong TH bên dưới 1rem sẽ = 20px và 2rem = 40px -->
+    <style>
+        html {
+            font-size: 20px;
+        }
+        p {
+            font-size: 2rem;
+        }
+    </style>
+    <!-- Đơn vị em, phụ thuộc vào thằng gần nhất với nó -->
+    <!-- Lưu ý: Thằng gần nhất không có font-size thì qua thằng kế tiếp cho đến khi nào có font-size thì ngưng -->
+    <!-- Trong ví dụ bên dưới font-size của h5 sẽ ăn theo font-size của thằng gần nó nhất là h6 -->
+    <style>
+        #testEm {
+            font-size: 2em;
+        }
+    </style>
+    <div>
+        <h6>h6 với font-size ở trên là 30px</h6>
+        <h5 id="testEm">h5 với font-size bắt chước của h6 nhưng *2 lên, là 60px</h5>
+    </div>
+    <!-- rem được dùng nhiều hơn em -->
+    <!-- vw - viewport width, vh - viewport height -->
+    <!-- vw chiều ngang CỦA trình duyệt, vh độ cao CỦA trình duyệt -->
+    <!-- 1vw là 1% so với chiều ngang trình duyệt -->
+    <!-- 1vh là 1% so với độ cao trình duyệt -->
+    <style>
+        .rectangle {
+            width: 50vw;
+            height: 20vh;
+            background-color: blueviolet;
+        }
+    </style>
+    <div class="rectangle"></div>
+
+    <p></p>
+
+    <!-- padding(box3), border(box2), margin(box1) -->
+    <!-- <style>
+        /* float left: attribute này sẽ giúp các element chịu sự ảnh hưởng, sẽ bị đẩy sang bên trái(cùng hàng) */
+        .box {
+            width: 100px;
+            height: 100px;
+            color: aliceblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            float: left;
+        }
+
+        /* margin(dùng để đẩy xa khoảng cách giữa các element) */
+        /* Lưu ý: margin không làm cho element bị dày lên như padding và border*/
+        .box1 {
+            background-color: black;
+            margin-right: 10px;
+        }
+        /* viết tắt cũng tương tự padding */
+        /* .box1 {
+            background-color: black;
+            margin: 10px;
+        } */
+
+        /* border(lớp viền, nên được kí hiệu là nét liền) */
+        /* dashed: nét đứt,  solid: nét liền - dashed, solid mặc định border là 2px */
+        /* border tương tự padding về cách ghi kích thước */
+        /* .box2 {
+            background-color: blue;
+            padding: 10px;
+            border: 10px;
+            border-style: dashed;
+            border-color: coral;
+        } */
+        /* muốn tránh mặc định của dashed, solid thì cho mấy hướng đó về 0 hết */
+        /* .box2 {
+            background-color: blue;
+            padding: 10px;
+            border-top: 10px;
+            border-right: 0;
+            border-bottom: 0;
+            border-left: 0;
+            border-style: dashed;
+            border-color: coral;
+        } */
+        /* viết tắt */
+        .box2 {
+            background-color: blue;
+            padding: 10px;
+            border: 10px dashed coral;
+            margin-left: 10px;
+        }
+        /* muốn border 1 hướng mà viết tắt */
+        /* .box2 {
+            background-color: blue;
+            padding: 10px;
+            border-top: 10px dashed coral;
+        } */
+        /* nếu mà chỉ truyền vô 2 giá trị(bỏ giá trị màu đi) thì vẫn ra nhma không có màu */
+        /* .box2 {
+            background-color: blue;
+            padding: 10px;
+            border: 10px dashed;
+        } */
+        /* còn nếu bỏ giá trị kích thược đi thì mặc định lấy theo style */
+        /* .box2 {
+            background-color: blue;
+            padding: 10px;
+            border: dashed coral;
+        } */
+
+        /* padding(lớp đệm cho cái khung, không phải viền nên là nét đứt) */
+        /* .box3 {
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            background-color: brown;
+        } */
+
+        /* Có thể ghi tắt như này */
+        /* .box3 {
+            padding: 10px;
+            background-color: brown;
+        } */
+        /* nếu truyền vô 2 giá trị thì giá trị đầu dc hiểu là top và bottom */
+        /* còn giá trị 2 sẽ hiểu là rigth and left */
+        /* .box3 {
+            padding: 10px 12px;
+            background-color: brown;
+        } */
+        /* nếu truyền vô 3 giá trị thì giá trị đầu dc hiểu là top */
+        /* còn giá trị 2 sẽ hiểu là rigth and left */
+        /* giá trị 3 sẽ là bottom */
+        /* .box3 {
+            padding: 10px 12px 8px;
+            background-color: brown;
+        } */
+        /* nếu truyền vô 4 giá trị thì giá trị đầu dc hiểu là top */
+        /* còn giá trị 2 sẽ hiểu là rigth */
+        /* giá trị 3 sẽ là bottom */
+        /* giá trị 4 sẽ là left */
+        /* có thể nhớ theo chiều kim đồng hồ (trên phải dưới trái) */
+        .box3 {
+            padding: 10px 12px 8px 6px;
+            background-color: brown;
+        }
+    </style>
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div> -->
+
+    <!-- Box sizing để thiết kế cho các element tự chỉnh sửa kích thước sao cho khớp vs width height gốc -->
+    <!-- nguyên tắc hoạt động của box-sizing: border-box là element = width - padding - border = 100 - 32 - 4 = 64 -->
+    <style>
+        .box4 {
+            width: 100px;
+            height: 100px;
+            font-size: 15px;
+            color: aliceblue;
+            background-color: crimson;
+            padding: 16px;
+            border: 2px solid blue;
+            box-sizing: border-box;
+        }
+
+        /* box-sizing: content-box; trả về như chưa dùng box-sizing(vô dụng vcl thà k ghi chứ ghi như k) */
+        /* .box4 {
+            width: 100px;
+            height: 100px;
+            font-size: 15px;
+            color: aliceblue;
+            background-color: crimson;
+            padding: 16px;
+            border: 2px solid blue;
+            box-sizing: content-box;
+        } */
+        /* box-sizing: unset; dùng để hủy đi cái đã style trước đó(box-sizing trước đó) */
+        /* dùng trong những lúc sửa website của người khác(hủy đi kết quả của ngkhac đỡ mắc công đọc rồi tự viết lại) */
+        /* .box4 {
+            box-sizing: unset;
+        } */
+    </style>
+    <div class="box4">Đây là nội dung bài viết</div>
+
+    <p></p>
+
+    <!-- background-clip, mặc định là background-clip: border-box; -->
+    <!-- giải quyết vấn đề border nét đứt xong có cái màu của background -->
+    <!-- đổ bóng từ chỗ nào đến content -->
+    <!-- như ví dụ bên dưới là đổ từ padding vô content -->
+    <style>
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: black;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 10px dashed green;
+            background-clip: padding-box;
+        }
+        /* đổ từ content */
+        /* .header {
+            width: 100%;
+            height: 100px;
+            background-color: black;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 10px dashed green;
+            background-clip: content-box;
+        } */
+    </style>
+    <div class="header"></div>
+
+    <p></p>
+
+    <!-- background-image -->
+    <!-- nếu hình bự quá thì dùng background-size -->
+    <!-- nếu nhỏ quá cái background-image sẽ lặp lại hình đó -->
+    <!-- nên phải dùng background-repeat: no-repeat; để không cho nó lặp lại -->
+    
+    <style>
+        /* #header {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg);
+            background-size: 100px;
+            background-repeat: no-repeat;
+        } */
+        /* có thể dùng nhiều hình ảnh để làm nền(hình đầu nằm trên hình sau) */
+        /* #header {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-mont-st-michel.jpg),
+                            url(https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        } */
+        /* linear-gradient(): dãy màu đi từ màu nào tới màu nào */
+        /* đối với 0 độ thì chỉ cần ghi số 0 còn mấy độ khác phải ghi thêm "deg" */
+        /* ví dụ dưới là xám -> đen từ trên xuống xám */
+        /* #header {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(0, black, grey)
+        } */
+        /* khi quay 90deg(theo chiều kim đồng hồ) */
+        /* sẽ thành đen -> xám từ trái sang phải */
+        /* #header {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(90deg, black, grey)
+        } */
+        /* khi quay 180deg(theo chiều kim đồng hồ) */
+        /* sẽ thành đen -> xám từ trên xuống dưới */
+        /* #header {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(180deg, black, grey)
+        } */
+        /* khi quay -90deg(ngược chiều kim đồng hồ) */
+        /* sẽ thành xám -> đen từ trái sang phải */
+        /* #header {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(-90deg, black, grey)
+        } */
+        /* Nếu không ghi độ vô thì mặc định là 180deg */
+        /* có thể kết hợp linear-gradient vs url */
+        /* #header {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg), linear-gradient(0, black, grey);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        } */
+        /* cách làm cho ảnh có 1 lớp mờ */
+        /* chỗ màu thay vì ghi như bình thường thì dùng rgba() */
+        /* red green blue alpha, trong đó alpha là độ trong suốt chạy từ 0-1 */
+        /* => chỉ cần chỉnh a là được */
+        /* ví dụ a = 0.5 có thể ghi tắt là .5 cũng được */
+        /* Ngoài ra màu còn có dạng #AAA là dạng HEX (mã màu sau này designer đưa dùng) */
+        /* #header {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(0, rgba(25, 25, 0, 0.5), rgba(250, 250, 250, 0.5)), url(https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        } */
+
+        /* background-size: + keyword */
+        /* background-size: contain; */
+        /* contain: lấy 1 trong 2 chiều dài nhất có thể sao cho không bị che khuất 1 phần nào của bức hình */
+        /* #header {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        } */
+        /* background-size: cover; */
+        /* tương tự như contain mà chấp nhận che khuất bức ảnh */
+        /* #header {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        } */
+
+        /* background-origin tương tự background-clip nhưng bên image */
+        /* background-origin: padding-box; mặc định là thằng này, đổ từ padding vô */
+        /* Do background-image mặc định là nó từ padding nên khi */
+        /* đổ từ padding-bõ vô thì cái viền nó khớp với image luôn */
+        /* #header {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            border: 20px dashed blue;
+            padding: 20px;
+            box-sizing: border-box;
+            background-origin: padding-box;
+        } */
+        /* Cách fix là thêm background-clip: content-box; và giữ nguyên background-origin: padding-box; để image chỉ đổ từ content vô thôi */
+        /* hoặc background-origin: content-box; */
+        /* #header {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            border: 20px dashed blue;
+            padding: 20px;
+            box-sizing: border-box; */
+            /* background-clip: content-box;
+            background-origin: padding-box; */
+            /* background-origin: content-box;
+        } */
+
+        /* background-position */
+        /* dùng để dịch chuyển hình đến vị trí top, bottom, top left, top,right, center... */
+        /* lưu ý: top sẽ được hiểu là top center (ở trên nhưng mà ở giữa) còn top left là ở trên bên trái */
+        /* #header {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg);
+            background-size: 200px;
+            background-repeat: no-repeat;
+            background-position: top;
+        } */
+        /* nếu dùng px, %, rem,... thì nó sẽ hiểu là cách từ mép trái và canh center */
+        /* #header {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg);
+            background-size: 200px;
+            background-repeat: no-repeat;
+            background-position: 50px;
+        } */
+        /* kết hợp dùng keyword vs px, %,... để dịch hình */
+        /* ví dụ đang top right mà muốn dịch vô trong xíu */
+        /* thì ghi top 20px right 20px có nghĩa là trên cùng dịch vô trong 20px và right dịch vô trong 20px */
+        /* #header {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg);
+            background-size: 200px;
+            background-repeat: no-repeat;
+            background-position: top 20px right 20px;
+        } */
+        /* còn nếu dùng số âm có nghĩa là dịch ra ngoài element */
+        /* #header {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg);
+            background-size: 200px;
+            background-repeat: no-repeat;
+            background-position: top -50px right -50px;
+        } */
+        /* giả sử truyền vô 20px 50px có nghĩa là dịch trái 20px trên xuống 50px */
+        /* hiểu đúng là nó sẽ vẽ ra 1 trục tọa độ xy với x = 0 y = 0 là top left */
+        /* và hơi ngược xíu là mặc dù y hướng xuống nhma là y dương */
+        /* nhìn ví dụ để hiểu rõ hơn */
+        /* #header {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg);
+            background-size: 200px;
+            background-repeat: no-repeat;
+            background-position: 20px 50px;
+        } */
+        /* Cách viết tắt tất cả những cái trong background */
+        /* Bấm từ "background" cho nó gợi ý rồi kéo tới dòng background nó sẽ hiện cái bảng gì đó */
+        /* Bên dưới bảng đó có dòng chữ màu xanh, gạch chân "MDN Reference" */
+        /* Bấm vô nó sẽ dẫn đến 1 trang chỉ rõ cú pháp viết tắt cho background */
+        /* Làm tương tự với mấy thằng khác cũng được */
+        #header {
+            width: 100%;
+            height: 100vh;
+            background: url(https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg) no-repeat center / contain;
+        }
+    </style>
+    <div id="header"></div>
+
+    <!-- CSS Function -->
+    <!-- calc() dùng để làm phép toán, giả sử nếu không dùng nó sẽ cộng sai -->
+    <!-- rgb() khác rgba() là không có độ trong suốt, cách dùng thì tương tự rgba() -->
+    <style>
+        #box {
+            width: calc(100px + 100px);
+            height: 200px;
+            color: white;
+            background-color: rgb(55, 55, 55);
+        }
+    </style>
+    <div id="box"></div>
+    <!-- attr() viết tắt của attribute thường được sử dụng với lớp giả -->
+    <!-- ví dụ cần sửa 2 chỗ khi cần thay đổi link -->
+    <!-- 1 là trong href. 2 là trong cái câu show ra -->
+    <a href="https://www.facebook.com/tuankiet29012003">Click here (https://www.facebook.com/tuankiet29012003)</a>
+    <p></p>
+    <!-- Cách dùng attr() cho ví dụ bên trên để đỡ mắc công ghi 2 lần -->
+    <!-- cách khai lớp giải ví dụ #testAttr::after{} -->
+    <!-- ::after là nó sẽ làm gì đó sau -->
+    <!-- lưu ý cái fix này nó sẽ thêm " (https://www.facebook.com/tuankiet29012003)" vào sau tất cả những thằng có id="testAttr" -->
+    <style>
+        #testAttr::after {
+            content: " (" attr(href) ")";
+        }
+        .testAttr {
+            width: calc(100px + 100px);
+            height: 200px;
+            color: white;
+            border: 10px dotted blue;
+            padding: 10px;
+            background-clip: content-box;
+            background-color: rgb(55, 55, 55);
+        }
+        .testAttr::after {
+            content: attr(titleTest);
+        }
+    </style>
+    <a id="testAttr" href="https://www.facebook.com/tuankiet29012003">Click here</a>
+    <!-- titleTest là 1 cái thuộc tính được tạo ra như class, id,... để gọi lại dùng trong attr() -->
+    <div class="testAttr" titleTest="Đây là Attr()"></div>
+
+    <p></p>
+    <!-- CSS pseudo-classes -->
+    <!-- pseudo: giả => pseudo-class là lớp giả -->
+    <!-- :root là toàn bộ thằng bên trong tag <html>
+    :visited là dùng với <a> để biết là mình đã từng bấm vô đường link này chưa bằng cách
+        nó check history của trình duyệt, nếu vô rồi thì màu sẽ đổi còn nếu chưa thì màu ban đầu
+        (không phải dạng bấm vô link mới đổi màu)
+    :hover là khi di chuột vào cái đó nó mới thay đổi, di ra nó trở về bình thường
+    :active là khi bấm giữ chuột thì nó hoạt động, không bấm trả lại bình thường
+    :first-child lấy được đứa con đầu
+    :last-child lấy được đứa con cuối
+    first last được dùng trong list -->
+    <style>
+        /* Test :visited
+        Thêm màu ban đầu là màu xanh */
+        /* a {
+            color: blue;
+        }
+        .testVisited:visited {
+            color: green;
+            text-decoration-color: hotpink;
+        } */
+        .testHover {
+            width: calc(100px + 100px);
+            height: 200px;
+            color: aliceblue;
+            background-color: rgb(55, 55, 55);
+        }
+        /* .testHover:hover {
+            color: red;
+            background: green;
+        } */
+        .testHover:hover {
+            color: red;
+            background: green;
+        }
+        /* Lưu ý: cái dấu chấm tròn của list là ăn theo tag <li>, không lquan đến màu của <ul> bên ngoài nó */
+        #list1:first-child {
+            font-size: 30px;
+            color: brown;
+        }
+        /* lưu ý: có thể dùng nhiều pseudo-classes cùng lúc */
+        #list1:last-child:hover {
+            font-size: 30px;
+            color: brown;
+        }
+
+        /* Pseudo-elements */
+        /* Đối với thằng này, ghi 2 dấu 2 chấm hay 1 dấu 2 chấm đều được. Nhưng dùng VSCode nó gợi ý bấm enter là auto ra 2 dấu 2 chấm */
+        /* ::before một thằng nằm đầu
+        ::after một thằng nằm cuối
+        ::first-letter thay đổi chữ đầu tiên
+        ::first-line thay đổi dòng đầu tiên. Lưu ý: Nếu chuỗi dài quá khiếng 1 số chữ nhảy qua dòng khác thì mấy dòng khác sẽ không bị ảnh hưởng
+        ::selection khi bôi chuột tô đậm nó sẽ ảnh hưởng */
+        #testBefore {
+            width: 100vw;
+            height: 200px;
+            background: peru;
+        }
+        /* Dùng element giả không thể thiếu content vì content mới giúp cái element giả này tồn tại được */
+        /* Mặc định thẻ <div> đã được trình duyệt gán cho display: block; rồi */
+        /* Nên chúng ta không cần thêm display: block; vô <div> làm gì cả */
+        /* Còn với element giả thì nó không có thuộc tính display: block;
+        nên nếu chúng ta muốn nó có tính chất khối giống <div> thì phải thêm vào */
+        /* 2 thằng before after này chúng ta cứ coi nó như <div> nên CSS bình thường */
+        /* content có thể bỏ trống cũng được nhưng bắt buộc phải có */
+        #testBefore::before {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: blueviolet;
+        }
+        #testBefore::after {
+            content: "Xin chào";
+            color: yellow;
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: plum;
+        }
+        #testChild::first-letter {
+            color: khaki;
+        }
+        #testChild::first-line {
+            color: blue;
+        }
+        /* Test ::selection */
+        /* Lưu ý: nếu ghi ::selection không là nó sẽ mặc định là toàn bộ cái nào dc selec */
+        #list1.child2::selection {
+            background-color: aqua;
+            color: tomato;
+        }
+    </style>
+    <a class="testVisited" href="https://uphimmoi.net/">Random example for :visited</a>
+    <div class="testHover">Test Hover Function</div>
+    <ul id="testChild">
+        <li id="list1">Con đầu</li>
+        <li id="list1">Những đứa con 1</li>
+        <li id="list1" class="child2">Những đứa con 2</li>
+        <li id="list1">Những đứa con 3</li>
+        <li id="list1">Con cuối</li>
+    </ul>
+    <!-- <br/> dùng để xuống dòng -->
+    <br/>
+    <div id="testBefore">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <br/>
+
+    <!-- Postion: học cách tạo ra 1 khung xuất hiện đè lên trang web của bạn
+    ví dụ: thông báo của web fb. Khi bấm vào chuông thông báo, nó sẽ mở ra một ô cửa sổ
+    gồm những dòng như có người like bài của bạn, có người nhắc đến bạn,...
+    thì đó là sử dụng Position -->
+    <!-- Position gồm có: relative, absolute, fixed, sticky(thằng này khuyến cáo không nên dùng vì 1 số trình duyệt không hỗ trợ) -->
+    <!-- Relative: tương đối -->
+    <!-- nó sẽ coi cái thằng gọi nó là tương đối
+    (nó không bị phụ thuộc vào bất kì thằng nào khác cả, nó sẽ lấy chính vị trí nó đang đứng làm góc tọa độ luôn, nó phụ thuộc vào chính nó, đứng im ở vị trí đã chọn)
+    có nghĩa là nó có khả năng đè lên thằng khác vì nó không bị ảnh hưởng xê dịch gì của mấy thằng khác
+    nếu mấy thằng khác xê dịch trúng nó => coi như bị đè ráng chịu
+    nó vẫn di chuyển khi screen đồ thay đổi kích thước(như bth)
+    nhưng nó sẽ là trục cố định cho các thẻ bên trong di chuyển theo trục của nó -->
+    <style>
+        .poRelative {
+            position: relative;
+            /* nếu chỉ khai position: relative thì không có gì xảy ra
+            vì nó vẫn nằm đó không đụng ai. Nhưng khi tăng top: 100px;(dịch trên xuống 100px) thì nó sẽ đè lên dòng 3 */
+            top: 100px;
+        }
+        /* Giả sử nếu chỉ đưa vô margin-top: 100px; thì nó sẽ đẩy hết xuống dưới không đè lên được */
+        /* .poRelative {
+            margin-top: 100px;
+        } */
+    </style>
+    <h5 class="poRelative">Test Relative</h5>
+    <ul>
+        <li>Đè tao đi 1</li>
+        <li>Đè tao đi 2</li>
+        <li>Đè tao đi 3</li>
+        <li>Đè tao đi 4</li>
+    </ul>
+
+    <!-- Absolute: tuyệt đối(mặc định) -->
+    <!-- Bị phụ thuộc vào thẻ cha gần nhất có thuộc tính position(ko cần bt là postion relative hay là gì miễn là position là dc) để lấy làm góc tọa độ -->
+    <!-- Khi dùng position: absolute cần phải xác định mục đích sử dụng của mình
+    tức là nhìn cái layout của bản thân, nhận thấy có 1 đối tượng
+    là con của 1 đối tượng khác và cần di chuyển đối tượng con xung quanh đối tượng cha
+    khi đó mới dùng position
+    Ví dụ: chuông thông báo của web fb chính là cha còn cái menu thông báo của nó chính là con
+    chúng ta có thể thấy cái menu nó đang dịch chuyển xuống bên dưới chuông thông báo
+    và chuông thông báo có thể coi là tương đối(relative) ko bị ảnh hưởng bởi xung quanh còn menu thông báo thì tuyệt đối(absolute)
+    di chuyển dựa trên tọa đồ của thằng cha -->
+    <style>
+        /* vì phụ thuộc cha gần nhất có position nên .boxCha phải có position */
+        /* theo lí thuyết ở trên thì .boxCha sẽ có position: relative; */
+        .boxCha {
+            width: 100%;
+            height: 200px;
+            color: chartreuse;
+            background-color: blue;
+            position: relative;
+        }
+        /* khai thằng con nằm gọn trong thằng cha */
+        /* suy ra con phải là position: absolute */
+        /* mặc định boxCon sẽ đứng top left của boxCha */
+        /* .boxCon {
+            width: 50px;
+            height: 50px;
+            background-color: cadetblue;
+            position: absolute;
+        } */
+        /* sang top right */
+        /* .boxCon {
+            width: 50px;
+            height: 50px;
+            background-color: cadetblue;
+            position: absolute;
+            top: 0;
+            right: 0;
+        } */
+        /* Lưu ý do kích thước boxCon QUÁ NHỎ so với boxCha
+        nên không thể đáp ứng được 1 số TH bên dưới: */
+        /* TH top 0 bottom 0 thì nó sẽ ưu tiên chọn top */
+        /* .boxCon {
+            width: 50px;
+            height: 50px;
+            background-color: cadetblue;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+        } */
+        /* TH top 0 bottom 0 right 0 => top right */
+        /* .boxCon {
+            width: 50px;
+            height: 50px;
+            background-color: cadetblue;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+        } */
+        /* TH left 0 right 0 thì nó sẽ ưu tiện chọn left */
+        /* .boxCon {
+            width: 50px;
+            height: 50px;
+            background-color: cadetblue;
+            position: absolute;
+            left: 0;
+            right: 0;
+        } */
+        /* TH top 0 bottom 0 left 0 right 0 => top left */
+        /* .boxCon {
+            width: 50px;
+            height: 50px;
+            background-color: cadetblue;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        } */
+        /* Tổng kết lại còn tùy vào kích cỡ mà suy ra ntn, những ví dụ trên là demo thôi */
+
+        /* Thiết kế cho thằng con mờ mờ che lên thằng cha(TH đặc biệt) */
+        /* chỉ cần bỏ width vs height đi là nó tự hiêu width height = cha */
+        /* kết hợp dùng rgba() để làm background mờ */
+        /* .boxCon {
+            background-color: rgba(255, 255, 255, 0.3);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        } */
+        /* TH đặc biệt test thử */
+        /* .boxCon {
+            background-color: rgba(255, 255, 255, 0.3);
+            position: absolute;
+            top: 30px;
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+        } */
+
+        /* Chứng minh lí thuyết đúng(là lấy theo thằng cha gần nhất) */
+        /* Thay vì nó theo top right của boxCha thì nó theo top right của testLiThuyet */
+        /* Còn testLiThuyet lại là con của boxCha nên bottom left theo boxCha */
+        .testLiThuyet {
+            width: 300px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .boxCon {
+            width: 50px;
+            height: 50px;
+            background-color: cadetblue;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+    <div class="boxCha">
+        Cha nè con ơi
+        <div class="testLiThuyet">
+            <div class="boxCon"></div>
+        </div>
+    </div>
+
+    <br/>
+
+    <!-- Fixed -->
+    <!-- Khi thấy 1 đối tượng phụ thuộc vào khung cửa sổ trình duyệt thì dùng fixed -->
+    <!-- Ứng dụng làm menu cố định chấp user di chuyển roll ntn cũng thấy nằm ở đó -->
+    <style>
+        /* phải top left các kiểu chứu không nó gán bừa vị trí ngu lắm */
+        .boxFixed {
+            width: 100%;
+            height: 60px;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        /* Để chỉnh cho thằng trên cùng không bị che bởi boxFixed thì dịch nó xuống */
+        h1 {
+            margin-top: 80px;
+        }
+        /* boxFixed nằm dưới thì cho bottom: 0; */
+        /* .boxFixed {
+            width: 100%;
+            height: 60px;
+            background-color: black;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        } */
+        /* tương tự nếu không muốn thằng dưới cùng bị che mất thì dịch lên */
+        /* Để height cao để lát test roll boxFied đi theo */
+        .ulFixed {
+            height: 1000px;
+        }
+    </style>
+    <div class="boxFixed"></div>
+    <ul class="ulFixed">
+        <li>Fixed 1</li>
+        <li>Fixed 2</li>
+        <li>Fixed 3</li>
+        <li>Fixed 4</li>
+    </ul>
+
+    <!-- Sticky: Bám dính -->
+    <!-- Ban đầu nó nằm ở đâu thì khi kéo nó sẽ di chuyển đến chỗ top bottom left right và bám dính luôn ở đó -->
+    <style>
+        .boxSticky {
+            width: 150vw;
+            height: 80px;
+            background-color: tomato;
+            /* Cho margin-left: -10px để đụng viền */
+            /* Chỉnh hoài không được nên tăng width lớn hơn 100% để che kín left right */
+            /* Cái sticky này ngu vcl, khác hẳn fixed ko cần chỉnh tào lao vẫn che kín left right */
+            margin-left: -10px;
+
+            /* Phần để setup cho Sticky */
+            position: sticky;
+            /* ghi dòng dưới vô để hỗ trợ trình duyệt safari */
+            position: -webkit-sticky;
+            /* cho top: 70px để không đè lên dòng màu đen hồi nãy, chứ đè lên thì vẫn được với muốn test rõ hơn
+            là nó tới top: 70px là nó dính luôn ở đó */
+            top: 70px;
+            /* Lưu ý position: sticky chỉ hỗ trỡ được top hoặc bottom thôi */
+        }
+        /* Để height cao để lát test roll boxSticky đi theo */
+        .ulSticky {
+            height: 1000px;
+        }
+    </style>
+    <div class="boxSticky"></div>
+    <ul class="ulSticky">
+        <li>Sticky 1</li>
+        <li>Sticky 2</li>
+        <li>Sticky 3</li>
+        <li>Sticky 4</li>
+    </ul>
+
+    <!-- CSS Flexbox -->
+    <!-- 1.display: flex | inline-flex. Display: xác định bạn có sử dụng layout flexbox hay không có nghĩa là bạn muốn tạo ra được
+        flex container và flex item thì lúc đó dùng display: flex còn nếu không dùng thì inline-flex(sắp xếp theo dòng)
+         2.flex-direction: row | column. Thằng này giúp bạn thay đổi phương hướng của main axis, mặc định sẽ có giá trị là row khi sử dụng display: flex.
+        Khi đó main axis sẽ nằm ngang còn nếu giá trị là column thì nằm dọc
+         3.flex-wrap: nowrap | wrap | wrap-reverse. Thằng này giá trị mặc định là nowrap. wrap có nghĩa là xuống dòng. Flex-wrap thêm vào flex container.
+        Ví dụ flex-direction: row thì tất cả flex item đều sẽ nằm ngang cùng dòng nếu để flex-wrap: nowrap(mặc định), để nó xuống dòng được thì để wrap
+        còn wrap-reverse là thay vì xuống dòng thì nó nhảy ngược lên dòng trên(thay đổi chiều cross start - cross end)
+         4.flex-flow: row wrap | row-reverse nowrap | column wrap-reverse | column wrap. Là cú pháp shorthand(viết tắt) của flex-direction và flex-wrap
+         5.flex-basis: <length>. Là thằng giúp set được kích thước của thằng main size, còn tùy vào main axis là trục nào(trục ngang/dọc)
+        thì flex-basis sẽ song song với main axis và chỉnh được kích thước của main size(song với main axis). Main size là chiều ngang/dọc của flex item.
+         6.justify-content: flex-start | flex-end | center | space-between | space-around. Là thuộc tính giúp căn chỉnh flex item theo phương của main axis
+        tức là có thể căn sang trái, sang phải hoặc là ở giữa trong TH main axis nằm ngang còn nếu main axis nằm dọc thì căn trên, căn dưới, ở giữa
+        flex-start(mặc định): dồn hết item lên main start
+        flex-end: dồn hết item qua main end
+        center: dồn hết item vô giữa
+        space-between: cách đều các item với 2 item ngoài cùng bám vào main start và main end
+        space-around: cách đều các item với mỗi item đều có 1 cái viền cách bao quanh bằng nhau(suy ra 2 item ngoài cùng k đụng main start và main end)
+         7.justify-self: flex-start | flex-end | center. Thằng này tương tự như justify-content(cha) nhưng justify-self(con) là con.
+        Có nghĩa là nếu set justify-content cho thằng cha rồi thì thằng con mặc định sẽ ăn theo và không cần justify-self nữa
+         8.align-items: flex-start | flex-end | center | baseline | stretch. Tương tự justify-content nhưng nó sẽ trùng với phương hướng của trục cross size.
+        Có nghĩa là trong TH cross size nằm dọc thì sẽ chỉnh căn trên, căn dưới, giữa còn TH nằm ngang thì căn trái, căn phải, giữa. Nói chung là theo cross size
+        flex-start(mặc định): item sẽ nằm tại cross start
+        flex-end: item sẽ nằm tại cross end
+        center: nằm ở giữa thằng cross start và cross end
+        baseline: nằm trên cái đường kẻ giữa của cross start và cross end(khác center vì center nằm giữa)
+        stretch: dãn hết item ra cho bám luôn cả cross start và cross end
+         9.align-self: flex-start | flex-end | center | baseline | stretch. Tương tự như justify-self, chỉ khác là chỉ set cho 1 flex item cụ thể.
+         10.flex-grow: <number>. Giúp tăng kích thước của main size (grow là tăng nên không thể làm nhỏ lại được)
+         11.flex-shrink: <number>. Thằng này thì ngược lại với flex-grow(tăng) nên nó giúp thu nhỏ main size lại (shrink là giảm nên không thể tăng được)
+         12.flex: <number>. Là cú pháp shorthand(viết tắt) của 3 thằng flex-basis, flex-grow và flex-shrink
+         13.order: <number>. Quyết định thứ flex item, quyết định thằng nào hiển thị trước, thằng nào hiển thị sau. Bình thường sẽ theo mặc định là main start - main end
+        còn nếu can thiệp vào thì có thể thay đổi theo vị trí mong muốn -->
+        <!-- Qua flexbox.html và styleFlex.css để coi code Flex Box -->
+
+        <!-- box-shadow: x y độmờ color -->
+        <style>
+            /* #testBoxShadow {
+                width: 100px;
+                height: 100px;
+                box-shadow: 10px 10px 10px red;
+                background-color: blue;
+            } */
+            /* có thể ghi 0 0 để nó bao xung quanh khung hình */
+            #testBoxShadow {
+                width: 400px;
+                height: 200px;
+                box-shadow: 0 0 10px red;
+                background-color: wheat;
+            }
+            /* Thêm đường kẽ mà đường kẽ dài hơn chữ => đó là cho border-bottom
+            thành 1 đường solid có màu */
+            .duongKe {
+                font-size: 20px;
+                background-color: wheat;
+                border-bottom: 2px solid black;
+            }
+        </style>
+        <div id="testBoxShadow">
+            <p class="duongKe">Test đường kẽ</p>
+        </div>
+    </body>
+</html>

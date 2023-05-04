@@ -1,0 +1,291 @@
+html {
+    background-color: #ccc;
+}
+/* body margin: 0; là để full màn hình */
+body {
+    margin: 0;
+}
+/* NavBar */
+.nav {
+    min-height: 42px;
+    background-color: red;
+    display: flex;
+    /* flex-start (mặc định) nằm từ main start
+    flex-end sẽ nằm từ main end
+    center căn giữa
+    space-between là khoảng cách giữa các flex item, cách đều nhau ra còn 2 thằng ngoài cùng sẽ bám sát vào trái phải
+    justify-content: flex-end; */
+    justify-content: space-between;
+}
+.nav-list {
+    padding-left: 0;
+    margin: auto 16px;
+}
+.nav-item {
+    color: white;
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+}
+
+/* Form layout */
+.form_container {
+    max-width: 720px;
+    padding: 32px;
+    margin: 36px auto 0 auto;
+    background-color: white;
+}
+/* form_row chính là flex container trong TH này còn form_laybel/input chính là flex item */
+.form_row {
+    padding: 8px 0;
+    background-color: white;
+    /* inline-flex nó sẽ để Name vs Password chung một hàng vì là inline
+    display: inline-flex;
+    còn display: flex; nó sẽ sắp xếp như bình thường trừ khi khung nhỏ mới dồn thành 1 hàng */
+    display: flex;
+}
+.form_label {
+    /* Để giải quyết bài toán chuỗi chữ dài(Password), chuỗi chữ ngắn(Name)
+    thì sẽ thêm min-width tức là chiều dài tối thiểu
+    thì ví dụ min-width: 90px thì độ dài của thằng ngắn và dài sẽ đều là 90px */
+    min-width: 90px;
+}
+.form_input {
+    /* Trong cái layout flex có nhiều item mà chỉ có một ông có giá trị lớn hơn hoặc bằng 1
+    thì khi đó ông ấy sẽ cố gắng chiếm hết khoảng không gian mà ông ấy có thể chiếm được
+    theo chiều của trục main axis. Trong TH này main axis nằm ngang và form_input chỉ có 1 thôi(cha là name thì chỉ có 1 con input, cha là pass thì 1 con input khác. 2 input này không cùng flex container)
+    nên ông ấy sẽ cố gắng chiếm hết cái chiều ngang */
+    flex: 1;
+}
+
+/* Column layout */
+/* column-layout là flex container */
+.column-layout {
+    margin-top: 36px;
+    padding: 12px 0;
+    background-color: white;
+    display: flex;
+}
+.column-item {
+    padding: 0 16px;
+}
+.sidebar-one {
+    /* Nếu tất cả các flex item đều có flex: 1; thì chúng sẽ có kích thước bằng nhau
+    1 được hiểu là trọng số ví dụ flex: 9 thì 9 sẽ dc chia đều cho 3 ông
+    nếu muốn 1 ông lớn gấp mấy lần (tỉ lệ theo trọng số) thì vô ông đó đặt flex: [số]; khác
+    ví dụ bên đây flex: 2 thì bên đây 2 phần; đổi main-column chiếm 3 phần thì flex: 3;
+    do có 3 item(2 + 3 + 2 = 7 phần) => 2/7, 3/7, 2/7 */
+    flex: 2;
+}
+.sidebar-two {
+    flex: 2;
+}
+.main-column {
+    flex: 3;
+}
+/* Nếu muốn sắp xếp lại thứ tự theo ý muốn
+ví dụ .sidebar-one rồi đến .sidebar-two rồi mới đến .main-column
+thì dùng order cho từng ông
+lưu ý: số càng nhỏ càng gần main start */
+/* .sidebar-one {
+    flex: 2;
+    order: 1;
+}
+.sidebar-two {
+    flex: 2;
+    order: 2;
+}
+.main-column {
+    flex: 3;
+    order: 3;
+} */
+
+
+/* Feature layout */
+/* .feature-layout là flex container */
+.feature-layout {
+    margin-top: 36px;
+    display: flex;
+    /* Mặc định sẽ có flex-direction: row; phù hợp với PC hơn. Nhưng mà khi co lại
+    cho tương thích với điện thoại samsung, iphone,... thì để column tốt hơn
+    để làm được chuyện chuyển qua cho nó tương thích giữa PC vs điện thoại tùy vào
+    người dùng muốn ntn thì dùng thêm thuộc tính @media() */
+    /* space-around khác space-between là around có khoảng trống 2 bên(có nghĩa là nó căn tính luôn mép 2 bên) và 2 bên của mỗi item phải đều nhau còn between là 2 bên cho sát vô lề chỉ căn đều ở giữa
+    justify-content: space-around; */
+    /* space-evenly là tất cả khoảng cách đều bằng nhau */
+    justify-content: space-evenly;
+}
+
+/* max-width: 500px; là độ dài tối đa 500px bằng với độ dài của trình duyệt điện thoại này
+lưu ý: 500px là số dự đoán thôi, không chính xác vì điện thoại độ dài nhỏ hơn 500px
+        nên tối đa 500px thôi */
+/* trong trường hợp là điện thoại samsung, iphone,... thì đổi
+thuộc tính flex-direction thành column cho nó tương thích hơn */
+@media (max-width: 500px) {
+    .feature-layout {
+        flex-direction: column;
+    }
+}
+
+.feature-item {
+    padding: 12px 16px;
+    margin-top: 16px;
+    /* flex-basis: 30%; là mỗi ông chiếm 30% thì còn thừa 10% để lát cách đều ra */
+    flex-basis: 30%;
+}
+/* .feature-item:nth-child(1) là con thứ n = 1 */
+.feature-item:nth-child(1) {
+    background-color: aquamarine;
+}
+.feature-item:nth-child(2) {
+    background-color: beige;
+}
+.feature-item:nth-child(3) {
+    background-color: lightpink;
+}
+
+/* Wrap layout */
+.wrap-layout {
+    background-color: #fff;
+    margin-top: 36px;
+    padding: 12px 0 32px 0;
+    display: flex;
+    /* space-around với cái thằng around này, khi co trình duyệt nhỏ lại nó sẽ không xuống dòng
+    mà nó chỉ teo lại mà cái ví dụ này lại muốn nó nhảy xuống dòng => phải dùng thêm flex-wrap.
+    flex-wrap: wrap; dùng để khi co lại nó xuống dòng */
+    flex-wrap: wrap;
+    /* do đang mặc định nên trục cross start end từ trên xuống nên nếu muốn khi co lại
+    mà nó nhảy lên trên thì dùng */
+    /* flex-wrap: wrap-reverse; */
+    justify-content: space-around;
+}
+.wrap-layout__item {
+    width: 148px;
+    height: 90px;
+    color: #fff;
+    text-align: center;
+    /* line-height thiết lập chiều cao giữa các dòng */
+    line-height: 90px;
+    font-size: 48px;
+    /* font-weight độ dày của chữ */
+    font-weight: 700;
+    margin-top: 20px;
+    background-color: #ef5122;
+}
+
+/* Center layout */
+/* .center-layout là flex container */
+.center-layout {
+    background-color: darkseagreen;
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    max-width: 640px;
+    height: 360px;
+    display: flex;
+}
+.center-layout__item {
+    font-size: 42px;
+    font-weight: 700;
+    /* để margin nó tự canh => canh giữa */
+    margin: auto;
+}
+
+/* Chart layout */
+/* .chart-layout là flex container */
+.chart-layout {
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    height: 320px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    /* do nó mặc định là flex-start(cross start) đi từ trên xuống
+    nên biểu đồ bị chổng ngược nên phải dùng align-items: flex-end;
+    để đi ngược lại từ cross end lên cross start. Mặc đinh của align-items là flex-start
+    Nếu không muốn dùng align-items: flex-end; thì có thể dùng
+    align-self: flex-end; bên .chart-layout__item */
+    align-items: flex-end;
+}
+.chart-layout__item {
+    width: 60px;
+    color: #fff;
+    text-align: center;
+    /* var(--percent) là cách dùng biến ghi bên flexbox.html */
+    height: var(--percent);
+    background-color: #ef5122;
+    /* align-self: flex-end; */
+    /* Dùng animation trong item:
+    viết cái name animation("growth") vào
+    tiếp theo là viết cái kiểu thực hiện:
+     ease: là chuyển động từ từ
+        ease-in: là lúc đầu chậm, lúc sau nhanh
+        ease-in-out: lúc đầu chậm, giữa nhanh, sau lại chậm
+        ease-out: chậm trước, nhanh sau (nhớ ko nhầm)
+     liner: là chuyển động đều
+    và cái cùng là thời gian thực hiện animation(từ from đến to) */
+    animation: growth ease 0.5s;
+}
+
+/* viết animation cho char sử dụng @keyframes growth
+growth chỉ là 1 cái tên đặt đại theo nghĩa lớn lên tăng lên */
+@keyframes growth {
+    /* dùng from(từ - bắt đầu) to(đến - kết thúc) */
+    from {
+        /* Opacity: độ trong suốt
+        Cho độ trong suốt lúc đầu = 0 */
+        opacity: 0;
+        /* calc() là hàm tính toán. Cho độ cao ban đầu là lấy độ cao ban đầu
+        trừ đi 50% */
+        height: calc(var(--percent) - 50%);
+    }
+    to {
+        /* Và đến khi kết thúc animation thì độ trong suốt = 1
+        giống như màu rgba() */
+        opacity: 1;
+        /* Cho chiều cao lúc sau bằng 100% của chính nó */
+        height: var(--percent);
+    }
+}
+
+/* Layout cuối cùng */
+/* .the-end là cha lớn
+Sau khi cho ngang hàng nhau thì thấy ông trắng chiếm chiều ngang hơi nhiều
+nên thêm flex: 1; vào first và second để 2 đứa nó bằng nhau */
+.the-end {
+    margin: 12px auto 48px auto;
+    padding: 32px 0;
+    max-width: 740px;
+    min-height: 360px;
+    display: flex;
+    /* Muốn đảo chỗ của trắng với hồng+xanh
+    thì dùng flex-direction: row-reverse; */
+}
+
+.the-end__first {
+    padding: 4px 16px;
+    background-color: white;
+    flex: 1;
+}
+.the-end__second {
+    flex: 1;
+    /* Sau khi bằng nhau thì thấy second one và second two chưa căn đều
+    nên phải chỉnh tụi nó, mà second là cha nên display: flex;
+    sau đó thêm flex: 1; vô one và two thì nó lại đều theo chiều ngang
+    vì mặc mặc đinh của flex-direction: grow; nên phải đổi thành column
+    nên phải thêm flex-direction: column; để chỉnh thành dọc */
+    display: flex;
+    flex-direction: column;
+    /* nếu muốn đảo ngược vị trí của màu hồng và xanh
+    thì dùng column-reverse
+    flex-direction: column-reverse; */
+}
+.the-end__second-one {
+    padding: 4px 16px;
+    background-color: pink;
+    flex: 1;
+}
+.the-end__second-two {
+    padding: 4px 16px;
+    background-color: cadetblue;
+    flex: 1;
+}

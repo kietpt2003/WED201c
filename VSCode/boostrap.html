@@ -1,0 +1,111 @@
+<!-- Boostrap(có width 100% chia thành 12column)
+thì boostrap hiểu nôm na cái thư viện dùng để chỉnh kích thước cho tương thích
+với nhiều thiết bị. -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Boostrap Testing</title>
+    <meta charset="UTF-8">
+    <!-- Từ dòng 11 đến 14 là khai báo boostrap 3 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styleBoostrap.css">
+</head>
+
+<body>
+    <!-- Muốn dùng boostrap 3 thì tất cả code đều phải nằm trong box(<div>) với class="container".
+    class="container" là class trong boostrap 3 gọi ra cho nó tự CSS thôi.
+    đối với boostrap 4 thì class="container-fluid". -->
+    <!-- đối với trường hợp của row này đi
+    có thể dễ dàng thấy 3 + 2 + 4 = 9 thì chắc chắn sẽ không hết chiều dài khung hình
+    nhưng không ảnh hưởng đến kích thước của tụi nó miễn không lớn hơn 12 column là được -->
+    <!-- xs = extra small screens (mobile phones)
+         sm = small screens (tablets)
+         md = medium screens (some desktops)
+         lg = large screens (remaining desktops) -->
+    <!-- Lưu ý: Đối với boostrap 3 sẽ ko có xl = extra large hay col-xl -->
+    <!-- col-xs  Dành cho các thiết bị rất nhỏ [Extra Small], có chiều rộng bao nhiêu cũng được, nó vẫn sẽ chia đều ra không bị mất cột
+                 nhưng cứ hiểu là nhỏ nhất là được
+         col-sm  Dành cho các thiết bị nhỏ [Small], có chiều rộng lớn hơn hoặc bằng 768px
+         col-md  Dành cho các thiết bị trung bình [Medium], có chiều rộng lớn hơn hoặc bằng 992px
+         col-lg  Dành cho các thiết bị lớn [Large], có chiều rộng lớn hơn hoặc bằng 1200px -->
+    <!-- Ví dụ: <div id="a" class="col-md-2"> nếu ghi như này thì nếu chiều rộng của div >= 992px
+    thì nó vẫn giữ nguyên là 2/12 = 1/6 khung hình còn nếu < 992px thì không áp dụng cái nào hết (không chia 1/6)-->
+    <div class="container">
+        <!-- <div class="row"> cũng là class của boostrap luôn, có thể hiểu là boostrap chỉnh từng dòng(row) -->
+        <div class="row">
+            <!-- class="col-md-2" có nghĩa là cái div này sẽ chiếm 2/12 = 1/6 chiều dài khung hình -->
+            <!-- còn cái id="a" là để thêm background-color thôi:v -->
+            <div id="a" class="col-md-2">
+                <p>col-md-2</p>
+            </div>
+            <!-- tương tự như mấy cái dưới thì sẽ thấy tổng = 12 column -->
+            <div id="b" class="col-md-3">
+                <p>col-md-3</p>
+            </div>
+            <div id="c" class="col-md-7">
+                <p>col-md-7</p>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div id="a" class="col-xs-2">
+                <p>col-xs-2</p>
+            </div>
+            <div id="b" class="col-xs-3">
+                <p>col-xs-3</p>
+            </div>
+            <div id="c" class="col-xs-7">
+                <p>col-xs-7</p>
+            </div>
+        </div> -->
+    <br>
+        <div class="row">
+            <!-- 3/12 = 1/4 chiều dài khung hình -->
+            <div id="a" class="col-sm-3">
+                <p>col-sm-3</p>
+            </div>
+            <!-- 2/12 = 1/6 chiều dài khung hình -->
+            <div id="b" class="col-sm-2">
+                <p>col-sm-2</p>
+            </div>
+            <!-- 4/12 = 1/3 chiều dài khung hình -->
+            <div id="c" class="col-sm-4">
+                <p>col-sm-4</p>
+            </div>
+        </div>
+    <br>
+        <!-- Nếu ghi như bên dưới thì có nghĩa là nếu >= 768px mà < 992px
+        thì sẽ áp dụng 2 3 7 còn nếu >= 992px thì sẽ áp dụng 3 2 4
+        và nếu < 768px thì không áp dụng cái nào hết -->
+        <div class="row">
+            <div id="a" class="col-sm-2 col-md-4">
+                <p>Test1</p>
+            </div>
+            <div id="b" class="col-sm-3 col-md-5">
+                <p>Test2</p>
+            </div>
+            <div id="c" class="col-sm-7 col-md-3">
+                <p>Test3</p>
+            </div>
+        </div>
+        <!-- Ví dụ đề cho: <div class = "col-md-4 col-sm-10 ">
+                            In a lg viewport the div will be _____ columns wide.
+            Bài giải: dễ dàng thấy không có lg trong class nhưng đừng lo
+              cứ phân tích đề ra, không cần nhớ rõ số chỉ cần nhớ theo thứ tự tăng dần về kích thước:
+              (không cần nhớ rõ, chỉ cần nhớ ý chính là nằm ở thứ tự nào và lớn/nhỏ như thế nào)
+                xs < sm < md < lg
+                Đề không cho lg nên khi đụng thiết bị với kích thước nằm trong khoảng lg
+                thì suy ra chắc chắn sẽ nằm trong khoảng của md => lấy col-md-4
+             Ví dụ đề cho: <div class = "col-sm-7 col-lg-2">
+                            In an xs viewport the div will be _____ columns wide.
+            Bài giải: nó sẽ ngược với ví dụ trên vì xs < sm nên cũng không nằm trong khoảng sm được
+            những trường hợp mà không nằm trong khoảng thì không dùng được class col- nào
+            => trở thành 12 column hết nha
+        -->
+    </div>
+</body>
+
+</html>

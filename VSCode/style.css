@@ -1,0 +1,50 @@
+/* Để margin của body = 0 để nó ôm hết html */
+body {
+    margin: 0;
+}
+h1 {
+    color: blue;
+    font-size: 30px;
+}
+#abc {
+    color: green;
+}
+
+#xyz {
+    color: blueviolet;
+}
+#ghj {
+    color: aqua;
+}
+.abc {
+    color: brown;
+    font-size: 20px;
+}
+* {
+    color: teal;
+}
+html {
+    color: yellow;
+}
+li {
+    color: black;
+}
+td {
+    color: black;
+}
+h6 {
+    color: coral !important;
+    font-size: 20px !important;
+}
+/* Biến trong CSS */
+/* Biến global */
+:root {
+    --testColor: red;
+}
+#testVar {
+    color: var(--testColor);
+}
+#testVar.test {
+    --varCol: blue; /* --varCol là biến local nên chỉ dùng trong đây được thôi, không dùng bên ngoài được */
+    color: var(--varCol);
+}
