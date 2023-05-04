@@ -1,0 +1,112 @@
+.container {
+    background-color: black;
+}
+
+.dishes {
+    padding-top: 15px;
+}
+
+.dishes img {
+    margin-bottom: 10px;
+}
+
+.dishes p {
+    color: white;
+    text-align: justify;
+    font-size: 14.5px;
+}
+
+.dishes h2 {
+    color: yellow;
+    text-align: center;
+    margin: 0;
+    font-size: large;
+}
+
+#promo {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+#promo input {
+    padding: 10px;
+    border: 1px solid rgb(255, 81, 0);
+    background-color: rgb(255, 81, 0);
+    border-radius: 10px;
+    font-size: larger;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-top: 1.5px solid rgb(247, 127, 71);
+    background-color: grey;
+}
+
+.contact {
+    color: white;
+    padding-top: 10px;
+}
+
+.link__contact {
+    display: flex;
+    justify-content: center;
+}
+
+.link__contact a {
+    margin: 25px 10px 0 0;
+}
+
+@media (max-width: 500px) {
+    .dishes h2 {
+        font-size: 22px;
+    }
+
+    .dishes p {
+        font-size: 17.7px;
+    }
+
+    .foot {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .link__contact {
+        padding-bottom: 10px;
+    }
+}
+
+.listSpe p {
+    text-align: center;
+    color: yellow;
+    font-weight: bold;
+}
+
+.table__box {
+    display: flex;
+    justify-content: center;
+}
+
+.my__table {
+    color: white;
+    text-align: center;
+    border: 2px;
+}
+
+.my__table th {
+    text-align: center;
+    padding: 10px;
+    color: yellow;
+}
+
+.my__table td {
+    padding: 5px;
+}
+
+#show__pro {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none;
+}
