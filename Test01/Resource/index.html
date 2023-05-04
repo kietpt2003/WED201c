@@ -1,288 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Shoe Laundry Shop</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/styleindex.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vietnamese Cuisine</title>
+    <link rel="stylesheet" href="styleindex.css">
+    <script src="mycode.js"></script>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body style="background-color:#E9E9E9;">
+  
+    <div class="container">
+    
+    <!--Nội dung logo-->
+    <div id="four__img" class="row" > 
+        <div class="col-sm-6 col-md-3 first__img">
+        	<img src="images/logoamthucvn.png" class="img-responsive" />
+        </div>
+        
+        <div class="col-sm-6 col-md-3 first__img">
+        	<img src="images/bobopthau.png" class="img-responsive"/>
+        </div>
+        
+        <div class="col-sm-6 col-md-3 first__img">
+        	<img src="images/banhcanh_tomthit.png" class="img-responsive"/>
+        </div>
+        
+        <div class="col-sm-6 col-md-3 first__img">
+        	<img src="images/goirau_thitbo.png" class="img-responsive"/>
+        </div>
+      </div>
+    <!--Nội dung Menu-->
+    <nav class="navbar navbar-inverse bg-primary"  role="navigation">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+             
+            </div>
+        
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+              
+                <li class="active"> <a href="index.html"> <span class="glyphicon glyphicon-home"></span> index</a> </li>
+                
+                <li ><a href="#">About</a></li>
+                <li ><a href="#">Menu</a></li>
+                <li><a href="#">Health</a></li>
+                
+                <li>  <a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact</a>  </li>
+              </ul>
+              
+              
+              <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Search</button>
+              </form>
+              
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+		</nav>
+    <!--Nội dung Slider-->
+    <div id="slider" class="row">
+    	<div class="col-md-12">
+    	<!--Bắt đầu slider-->
+               <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+              </ol>
+            
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="images/slider_1.jpg" alt="Vietnamese Cuisine">
+                </div>
+                
+                <div class="item">
+                  <img src="images/slider_2.jpg" alt="Vietnamese Cuisine">
+                </div>
+                
+                <div class="item">
+                  <img src="images/slider_3.jpg" alt="Vietnamese Cuisine">
+                </div>
+               
+              </div>
+            
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div><!--Kết thúc slider-->
+         </div>
+    </div>
+   <!-- Nội dung chi tiết-->
+    <div id="dishes" class="row"><!--Món ăn thứ nhất-->
+    	<div class="col-md-5"> 
+       		<img id="dish__img1" src="images/miquang.jpg" class="img-responsive" onmouseover="ChangeImg(this)"/> 
+       	</div>
+    <div class="col-md-7">  
+        
+		<h1> Mi Quang</h1>
 
-	<div class="container-fluid">
-	
-		<div class="row">
-			
-			 <nav class="navbar navbar-inverse bg-primary"  role="navigation">
-			  <div class="container-fluid">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-				  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				  </button>
-
-				</div>
-
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				  <ul class="nav navbar-nav">
-
-					<li class="active"> <a href="index.html"> <span class="glyphicon glyphicon-home"></span> index</a> </li>
-
-					<li ><a href="#">About</a></li>
-					<li ><a href="#">Services</a></li>
-					<li><a href="#">News</a></li>
-
-					<li>  <a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> Contact</a>  </li>
-				  </ul>
-
-
-				  <form class="navbar-form navbar-right" role="search">
-					<div class="form-group">
-					  <input type="text" class="form-control" placeholder="Search">
-					</div>
-					<button type="submit" class="btn btn-default">Search</button>
-				  </form>
-
-				</div><!-- /.navbar-collapse -->
-			  </div><!-- /.container-fluid -->
-			</nav>
-			
-		</div>
-		
-		
-		<div class="row">
-		
-			<div id="shoes__banner" class="col-md-12">
-				<div class="shoes__banner">
-					<img src="images/Shoes_Banner.jpg" />
-				</div>
-			</div>
-		
-		</div>
-		
-		
-	</div> <!--Kết thúc container-fluid-->
-	
-	<div class="container">
-	
-		<div class="row">
-		
-			<div class="col-md-12">
-			
-				<h2>Services</h2>
-				
-			</div>
-		
-		</div>
-	
-		<div class="row">
-		
-			<div id="service__item" class="col-md-3">
-				<div class="service__item">
-					<!-- img-responsive là class của boostrap dùng canh hình -->
-					<img class="img-responsive" src="images/service01.jpg"/>
-					<div class="service__item info">
-						<h3>Cheap Shoe Washing</h3>
-						<p>Perfect quality</p>
-
-					</div>
-
-				</div>
-				
-				
-			</div>
-			
-			<div id="service__item" class="col-md-3">
-				<div class="service__item">
-					<img class="img-responsive" src="images/service02.jpg"/>
-					<div class="service__item info">
-						<h3>Cheap Repaint</h3>
-						<p>The best quality</p>
-
-					</div>
-				
-				</div>
-				
-			</div>
-			
-			<div id="service__item" class="col-md-3">
-				<div class="service__item">
-				
-					<img class="img-responsive" src="images/service03.jpg"/>
-					<div class="service__item info">
-						<h3>Cheap shoe sole stickers</h3>
-						<p>Absolute shoe sole protection</p>
-
-					</div>
-
-				</div>
-				
-				
-			</div>
-			<div id="service__item" class="col-md-3">
-				<div class="service__item">
-				
-					<img class="img-responsive" src="images/service04.jpg"/>
-					<div class="service__item info">
-						<h3>Glue Shoes</h3>
-						<p>Reliable quality</p>
-
-					</div>
-
-				</div>
-				
-				
-			</div>
-			
-			
-		</div>
-		
-		<div class="row">
-			<!-- text-center là class của boostrap dùng để căn chữ giữa -->
-			<div id="combo" class="col-md-12 text-center">
-			
-				<h2>HUGE PROMOTION COMBO</h2>
-				<p>During the promotion period, let's wash your shoes!</p>
-			</div>
-		
-		</div>
-		
-		<div class="row">
-		
-			<div>
-			
-					<div class="col-md-4">
-						<img class="img-responsive" src="images/combo01.PNG" />
-						<div class="item">
-							
-							<p class="item__combo first-child">COMBO laundry 3 get 1 free</p>
-							<p>Discount locations:<span style="font-weight: bold;margin-left: 10px;">Tan Phu District Branch</span> </p>
-							<p>Price: <del> 200.000 vnđ </del> <span style="color: #F72B2F; margin-left:10px; ">150.000 vnđ</span></p>
-						</div>
-				
-				
-					</div>
-			
-			</div>
-			
-			<div>
-			
-					<div class="col-md-4">
-						
-						<img class="img-responsive" src="images/combo02.PNG" />
-						<div class="item">
-							<p class="item__combo">COMBO laundry 3 get 1 free</p>
-							<p>Discount locations:<span style="font-weight: bold;margin-left: 10px;">Tan Phu District Branch</span> </p>
-							<p>Price: <del>500.000 vnđ </del> <span style="color: #F72B2F; margin-left:10px; ">450.000 vnđ</span></p>
-							
-						</div>
-				
-					</div>
-			
-			</div>
-			
-			<div>
-			
-					<div class="col-md-4">
-						<img class="img-responsive" src="images/combo03.PNG" />
-						<div class="item">
-							<p class="item__combo">COMBO laundry 3 get 1 free</p>
-							<p>Discount locations:<span style="font-weight: bold;margin-left: 10px;">Tan Phu District Branch</span> </p>
-							<p>Price: <del>150.000 vnđ </del> <span style="color: #F72B2F; margin-left:10px; ">100.000 vnđ</span></p>				
-
-						</div>
-				
-					</div>
-			
-			</div>
-		
-		
-		</div>
-		
-		
-		<div class="row">
-		
-			<div id="special" class="col-md-12 text-center">
-			
-				<h2>SPECIAL ORDER ONLINE</h2>
-				<p>Surprisingly cheap and freeship</p>
-			</div>
-		
-		</div>
-		
-		<div class="row">
-		
-			<div>
-			
-					<div class="col-md-6">
-						
-						<img class="img-responsive" src="images/orderOnline.jpg" />
-						
-					</div>
-			
-			</div>
-			
-			<div>
-			
-					<div class="col-md-3">
-						
-						<img class="img-responsive" src="images/sale20.png" />
-						
-						<div class="item">
-							<p class="item__combo">Order online 20% off</p>
-							<p>Discount locations:<span style="font-weight: bold;margin-left: 10px;">Tan Phu District Branch</span> </p>
-							<p><del>100% </del> <span style="color: #F72B2F; margin-left:10px; ">80%</span></p>
-							
-						</div>
-					</div>
-			
-			</div>
-			
-			<div>
-			
-					<div class="col-md-3">
-						
-						<img class="img-responsive" src="images/camau.jpg" />
-						
-						<div class="item">
-							<p class="item__combo">Free shipping under 3km</p>
-							<p>Discount locations:<span style="font-weight: bold;margin-left: 10px;">Tan Phu District Branch</span> </p>
-							<p><del>60.000 vnđ </del> <span style="color: #F72B2F; margin-left:10px; ">0 vnđ</span></p>
-							
-						</div>
-					</div>
-			
-			</div>
-		
-		
-		</div>
-		
-		
-	
-	</div>
-	
-	<div class="container-fluid">
-		
-		<div class="row">
-			
-			<div class="contact">
-				
-				<p>Email : ShooesVN@gmail.com</p>
-				<p>Address: 100 Vuon Lai, Tan Phu District, HCMC</p>
-				<h5>&copy; Copyright 2021. Shoes.VN</h5>
-			</div>
-			
-		</div>
-		
-	</div>
-	
+        <p> Without a doubt, the most underrated dish in Vietnam is Mi Quang. Mi quang may be available at most restaurants in Vietnam, but it actually originates from Da Nang. Easily distinguished by its yellow-coloured rice noodles, this dish is a hearty mix of bone broth seasoned with fish sauce, black pepper, shallot, and garlic, as well as meaty ingredients such as river shrimp, boiled quails eggs, and roast pork.</p>
+        
+        <p> There is no correct way to cook Mi Quang – it really depends on your tastes and preferences. To most of Danangians, the best Mi Quang is home-made by their mothers or grandmothers, attached with love and memories. Mi Quang brings out the feeling of genuineness and simplicity just like the people in Central Vietnam, one that is hard to come across in the modern dishes </p>
+        <div class="dishes__button">
+        	<button type="button" class="btn btn-success">Detail</button>
+        </div>
+     </div>
+    </div>
+    
+   
+    <div id="dishes" class="row"> <!--Món ăn thứ hai-->
+    	<div class="col-md-7">
+        	<h1> SPING ROLLS </h1>
+            <p> 
+            Another famous Vietnamese food is spring rolls. It’s usually served as an appetizer at restaurants in Vietnam. This healthy food is a smart choice for you when you’ve eaten too much of the fried food in Vietnam. Spring rolls have meat, rice noodles, shrimp or other seafood and a layer of vegetable. It’s gently rolled with ricepaper. You eat it with fish sauce. It costs 8.000 VND per roll. You will absolutely like it.
+            </p>
+            <p> 
+            Fried spring roll was brought to Hanoi from the Southern part of vietnam and this dish has rapidly become a favorite one of Hanoian, and to express the affection as well as to remember the real origin of the dish, people here call it “Nem Sai Gon”.
+            </p>
+        <div class="dishes__button">
+        	<button type="button" class="btn btn-success">Detail</button>
+        </div>
+        
+        </div>
+        <div class="col-md-5">  
+        	<img id="dish__img2" src="images/spingroll.jpg" class="img-responsive" onmouseover="ChangeImg(this)"/>
+        </div>
+    </div>
+    
+    <!--nội dung footer-->
+    <div id="footer" class="row">
+        <div class="col-md-6 contact__info">
+            <ul>
+                  <li>Phone : 0981235670</li>
+                  <li>Address : 50-82 Bui Vien Street, Pham Ngu Lao Ward, District 1, Ho Chi Minh City</li>
+                  <li>Copyright - Vietnamese Cuisine. All rights Reserved.</li>
+           </ul>
+        </div>
+        
+        <div class="col-md-6 link__page">
+        	
+           <a href="#"><img src="images/facebook_1.png"/></a> 
+           <a href="#"><img src="images/link_xahoi.png"/></a> 
+           <a href="#"><img src="images/Twiter.png"/></a> 
+     
+        </div>
+    </div>
+  </div><!--Kết thúc contianer-->
+   
+    <!--Thư viên javascript của Bootstrap-->
 	<script src="js/Jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-	
-</body>
-	
+    
+   
+  </body>
 </html>
+
+
+
