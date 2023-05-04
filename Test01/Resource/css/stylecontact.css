@@ -1,0 +1,17 @@
+.my__table {
+    margin: 10px;
+}
+
+.form__input {
+    height: 25px;
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+.input__tag {
+    margin-bottom: 5px;
+}
+
+.send__button {
+    text-align: center;
+}
