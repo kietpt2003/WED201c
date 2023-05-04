@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylecontact.css">
+    <script src="mycode.js"></script>
+</head>
+
+<body>
+    <table class="my__table">
+        <tr>
+            <td class="form__input">
+                <!-- Thêm label để chữ không bị lớn ra ngoài các thứ(nghĩa là có cái khung chứa chữ
+                    và khung sẽ tự động resize nếu chữ lớn hơn khung) -->
+                <label for="">FullName</label>
+            </td>
+            <td>
+                <!-- Size dùng để tăng chiều dài ô input -->
+                <!-- onmousedown là khi ấn chuột xuống(down) còn onmouseup là khi nhả ấn ra(up)
+                onmouseover là khi di chuột vô còn onmouseout là khi di chuột ra -->
+                <input class="input__tag" type="text" size="28px" placeholder="Enter Fullname" id="name" onclick="Color_Background('name')">
+                <!-- <input class="input__tag" type="text" size="28px" placeholder="Enter Fullname" id="name" onclick="Color_Background()"> -->
+            </td>
+        </tr>
+        <tr>
+            <td class="form__input">
+                <label for="">Phone</label>
+            </td>
+            <td>
+                <!-- <input class="input__tag" type="text" size="28px" placeholder="Enter Your Phone" id="phone" onclick="Color_Background()"> -->
+                <input class="input__tag" type="text" size="28px" placeholder="Enter Your Phone" id="phone" onclick="Color_Background('phone')">
+            </td>
+        </tr>
+        <tr>
+            <td class="form__input">
+                <label for="">Email</label>
+            </td>
+            <td>
+                <!-- <input class="input__tag" type="text" size="28px" placeholder="Enter Your Email" id="txt" onclick="Color_Background()"> -->
+                <input class="input__tag" type="text" size="28px" placeholder="Enter Your Email" id="txt" onclick="Color_Background('txt')">
+            </td>
+        </tr>
+        <tr>
+            <!-- tạo 1 table data(td) rỗng, vì đây là bảng có 2 cột
+            nên nếu muốn nút send nằm giữa bên input thì phải nằm ở cột thứ 2 -->
+            <td></td>
+            <td class="send__button">
+                <input type="button" value="Send">
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
